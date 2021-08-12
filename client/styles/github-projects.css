@@ -1,7 +1,8 @@
 .projects-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "project-wrapper project-wrapper project-wrapper";
+  grid-template-columns: repeat(auto-fit, 320px);
+  gap: 20px;
+  justify-content: center;
 }
 
 .project-wrapper {
@@ -9,11 +10,9 @@
   background: var(--secondaryColor);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 3rem 3em; */
   grid-template-areas:
     "project-header project-header"
     "description description";
-  /* width: 0px; */
   padding: 1em;
   margin: 1em;
   gap: 20px;
@@ -23,8 +22,10 @@
   grid-area: project-header;
   display: flex;
   flex-direction: row;
+
   justify-content: space-between;
   align-items: baseline;
+  width: 100%;
 }
 
 .info {
