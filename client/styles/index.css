@@ -109,5 +109,18 @@ ul {
       "nav-wrapper"
       "left-column"
       "right-column";
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #profile-pic {
+    /* display: block;*/
+    margin: 0;
+    height: 150px;
+    width: 150px;
+    /* object-fit: cover; */
   }
 }
