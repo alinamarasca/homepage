@@ -1,0 +1,100 @@
+@import url("./intro.css");
+@import url("./github-projects.css");
+
+:root {
+  --mainColor: #e6f0f4;
+  --secondaryColor: #fff;
+
+  --borderColor: #db729a;
+
+  --mainText: black;
+  --secondaryText: #4b5156;
+
+  --link: #17a2b8;
+  --linkHover: #a13666;
+  --header: #005b8b;
+
+  --headerFont: "Dosis";
+  --textFont: "Montserrat";
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--textFont);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--mainText);
+  font-family: var(--headerFont);
+}
+
+p,
+li,
+span,
+label,
+input,
+textarea {
+  color: var(--secondaryText);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--linkHover);
+}
+
+ul {
+  list-style: none;
+}
+
+.s1 {
+  margin: 2em;
+  background-color: var(--mainColor);
+  /* border-bottom: 1px solid var(--borderColor); */
+  overflow: auto;
+  box-shadow: 23px 23px 34px #b8b8b8, -23px -23px 34px #ffffff;
+}
+
+.s2 {
+  margin: 2em;
+  padding: 3em;
+  background-color: var(--mainColor);
+  /* border-bottom: 1px solid var(--borderColor); */
+  overflow: auto;
+
+  background: #ffffff;
+  box-shadow: 23px 23px 34px #b8b8b8, -23px -23px 34px #ffffff;
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+  /* padding: 5em; */
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .intro-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav-wrapper"
+      "left-column"
+      "right-column";
+  }
+}
