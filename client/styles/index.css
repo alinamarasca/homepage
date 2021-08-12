@@ -5,7 +5,7 @@
   --mainColor: #e6f0f4;
   --secondaryColor: #fff;
 
-  --borderColor: #db729a;
+  --borderColor: #ffc0cb;
 
   --mainText: black;
   --secondaryText: #4b5156;
@@ -41,7 +41,6 @@ strong {
 p,
 li,
 span,
-label,
 input,
 textarea {
   color: var(--secondaryText);

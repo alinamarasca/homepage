@@ -3,8 +3,6 @@ export const contact = () => {
   section.className = "s3";
   const div = document.createElement("div");
   div.className = "main-container";
-  const h3 = document.createElement("h3");
-  h3.innerText = "Get In Touch";
   const wrapper = document.createElement("div");
   wrapper.className = "form-wrapper";
   div.appendChild(wrapper);
@@ -26,7 +24,7 @@ export const contact = () => {
   label.textContent = "Message";
   form.appendChild(label);
   const message = document.createElement("textarea");
-  message.className = "input-field";
+  message.className = "textarea";
   message.setAttribute("name", "Message");
   form.appendChild(message);
 
@@ -36,6 +34,6 @@ export const contact = () => {
   button.id = "submit-btn";
   form.appendChild(button);
   section.appendChild(div);
-  div.append(h3, form);
+  div.append(form);
   return section;
 };
