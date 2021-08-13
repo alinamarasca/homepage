@@ -1,7 +1,7 @@
 import { fetchUser } from "../../../api-calls/api-call.js";
 
 export const githubProjects = document.createElement("section");
-githubProjects.className = "s1";
+githubProjects.className = "s2";
 
 const div = document.createElement("div");
 div.className = "main-container";

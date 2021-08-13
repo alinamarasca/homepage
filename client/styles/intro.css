@@ -9,28 +9,14 @@
   padding: 30px 30px 60px 30px;
 }
 
-.nav-wrapper {
-  grid-area: nav-wrapper;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-bottom: 30px;
-}
-
-#navigation {
-  margin: 0;
-  padding: 10px;
-}
-
-#navigation li {
-  display: inline-block;
-  margin: 10px;
-  background-color: var(--secondaryColor);
-  padding: 1em;
+.left-column {
+  grid-area: left-column;
 }
 
 .left-column {
-  grid-area: left-column;
+  background-image: url(../public/photo.jpeg) no-repeat;
+  /* width: 200px;
+  height: 200px; */
 }
 
 #profile-pic {
