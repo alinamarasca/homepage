@@ -3,12 +3,14 @@ import { navbar } from "../../layout/navbar.js";
 export const intro = () => {
   const section = document.createElement("section");
   section.className = "s1";
+  section.id = "intro";
 
   const div = document.createElement("div");
   div.className = "main-container";
 
   const wrapper = document.createElement("div");
   wrapper.className = "intro-wrapper";
+  wrapper.id = "anchor-intro";
   div.appendChild(wrapper);
 
   const photo = document.createElement("div");

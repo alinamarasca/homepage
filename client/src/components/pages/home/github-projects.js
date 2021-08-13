@@ -7,7 +7,7 @@ const div = document.createElement("div");
 div.className = "main-container";
 
 const projects = document.createElement("div");
-projects.className = "projects-list";
+projects.id = "projects-list";
 div.appendChild(projects);
 githubProjects.appendChild(div);
 

@@ -12,15 +12,16 @@ export const navbar = (routes) => {
   menu.id = "navigation";
 
   const intro = document.createElement("div");
-  intro.textContent = "Intro";
+  intro.innerHTML = `<a href='#intro'>Intro</a>`;
   menu.appendChild(intro);
 
   const projects = document.createElement("div");
-  projects.textContent = "Projects";
+  projects.innerHTML = `<a href='#projects-list'>Projects</a>`;
   menu.appendChild(projects);
 
   const contact = document.createElement("div");
-  contact.textContent = "Contact";
+  // contact.textContent = "Contact";
+  contact.innerHTML = `<a href='#contact-form'>Contact</a>`;
   menu.appendChild(contact);
 
   wrapper.append(menu);

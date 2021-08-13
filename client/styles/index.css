@@ -23,6 +23,10 @@
   --defaultShadow: 23px 23px 34px #b8b8b8, -23px -23px 34px #ffffff;
 }
 
+html {
+  scroll-padding-top: 8em; /* height of sticky header */
+}
+
 html,
 body {
   padding: 0;
