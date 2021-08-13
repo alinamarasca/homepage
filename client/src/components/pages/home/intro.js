@@ -24,7 +24,7 @@ const photo = document.createElement("div");
 photo.className = "left-column";
 const img = document.createElement("img");
 img.id = "profile-pic";
-img.setAttribute("src", "../client/public/dudes.png");
+img.setAttribute("src", "./client/public/dudes.png");
 photo.appendChild(img);
 
 const about = document.createElement("div");
