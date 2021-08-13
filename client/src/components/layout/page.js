@@ -1,5 +1,5 @@
 import { navbar } from "./navbar.js";
-import { footer } from "./footer.js";
+// import { footer } from "./footer.js";
 
 /**
  * The page layout component.
@@ -20,7 +20,7 @@ export const page = (bodyComponent, routes) => {
   } else {
     throw new TypeError("body is not a function or a DOM element");
   }
-  container.appendChild(footer());
+  // container.appendChild(footer());
 
   return container;
 };

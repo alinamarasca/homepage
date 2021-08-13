@@ -5,16 +5,33 @@
  * @returns {HTMLDivElement} A rendered nav bar element.
  */
 export const navbar = (routes) => {
-  const container = document.createElement("nav");
-  container.className = "navbar";
+  const wrapper = document.createElement("nav");
+  wrapper.className = "nav-wrapper";
 
-  for (const route of routes) {
-    const anchor = document.createElement("a");
-    anchor.innerHTML = route.name;
-    anchor.href = route.path;
-    anchor.setAttribute("data-navigo", "");
-    container.appendChild(anchor);
-  }
+  const menu = document.createElement("div");
+  menu.id = "navigation";
 
-  return container;
+  const intro = document.createElement("div");
+  intro.textContent = "Intro";
+  menu.appendChild(intro);
+
+  const projects = document.createElement("div");
+  projects.textContent = "Projects";
+  menu.appendChild(projects);
+
+  const contact = document.createElement("div");
+  contact.textContent = "Contact";
+  menu.appendChild(contact);
+
+  wrapper.append(menu);
+
+  // for (const route of routes) {
+  //   const anchor = document.createElement("a");
+  //   anchor.innerHTML = route.name;
+  //   anchor.href = route.path;
+  //   anchor.setAttribute("data-navigo", "");
+  //   container.appendChild(anchor);
+  // }
+
+  return wrapper;
 };
