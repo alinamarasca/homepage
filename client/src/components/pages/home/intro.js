@@ -10,14 +10,16 @@ export const intro = () => {
 
   const wrapper = document.createElement("div");
   wrapper.className = "intro-wrapper";
-  wrapper.id = "anchor-intro";
   div.appendChild(wrapper);
 
   const photo = document.createElement("div");
   photo.className = "left-column";
   const img = document.createElement("img");
   img.id = "profile-pic";
-  img.setAttribute("src", "../client/public/photo.jpeg");
+  img.setAttribute(
+    "src",
+    "https://images.unsplash.com/photo-1621045122639-b38a49f0d3c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80"
+  );
   photo.appendChild(img);
 
   const about = document.createElement("div");
