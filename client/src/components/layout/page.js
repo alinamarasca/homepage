@@ -14,18 +14,10 @@ export const page = (bodyComponent, routes) => {
 
   container.appendChild(navbar(routes));
   if (typeof bodyComponent === "function") {
-    const fnResult = bodyComponent();
-    if (fnResult instanceof Promise) {
-      fnResult.then(c =>  container.appendChild(c));
-    } else {
-      container.appendChild(fnResult);
-    }
+    container.appendChild(bodyComponent());
   } else if (bodyComponent instanceof Element) {
     container.appendChild(bodyComponent);
-  } else if (bodyComponent instanceof Promise){
-    bodyComponent.then(c =>  container.appendChild(c));
-  }
-  else {
+  } else {
     throw new TypeError("body is not a function or a DOM element");
   }
   // container.appendChild(footer());
