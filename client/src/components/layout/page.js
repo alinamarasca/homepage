@@ -14,7 +14,12 @@ export const page = (bodyComponent, routes) => {
 
   container.appendChild(navbar(routes));
   if (typeof bodyComponent === "function") {
-    container.appendChild(bodyComponent());
+    const fnResult = bodyComponent();
+    if (fnResult instanceof Promise) {
+      fnResult.then(c =>  container.appendChild(c));
+    } else {
+      container.appendChild(fnResult);
+    }
   } else if (bodyComponent instanceof Element) {
     container.appendChild(bodyComponent);
   } else if (bodyComponent instanceof Promise){
