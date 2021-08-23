@@ -17,7 +17,10 @@ export const page = (bodyComponent, routes) => {
     container.appendChild(bodyComponent());
   } else if (bodyComponent instanceof Element) {
     container.appendChild(bodyComponent);
-  } else {
+  } else if (bodyComponent instanceof Promise){
+    bodyComponent.then(c =>  container.appendChild(c));
+  }
+  else {
     throw new TypeError("body is not a function or a DOM element");
   }
   // container.appendChild(footer());
